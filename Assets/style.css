@@ -1,4 +1,20 @@
+/* Background Image */
+body {
+    background: url("../Assets/images/vecteezy_junk-food-seamless-pattern-background_7660940.jpg");
+}
+/* Heading */
 h1 {
     font-family: 'Mukta', sans-serif;
     text-align: center;
+    color: rgb(253, 253, 253);
+    text-shadow: 5px 5px rgb(250, 27, 139);
+    font-size: 5rem;
 }
+#Heading {
+    width: 100%;
+    height: 10rem;
+    background-color: rgb(8, 7, 7);
+    opacity:0.8;
+
+}
+/* Search Box */
