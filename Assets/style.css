@@ -1,6 +1,7 @@
 /* Background Image */
 body {
-    background: url("../Assets/images/vecteezy_junk-food-seamless-pattern-background_7660940.jpg");
+    background:  linear-gradient(rgba(230, 215, 215, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../Assets/images/vecteezy_junk-food-seamless-pattern-background_7660940.jpg");
 }
 /* Heading */
 nav {
