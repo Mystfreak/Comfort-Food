@@ -31,3 +31,20 @@ body {
     right:3%;
     width: 20%;
 }
+
+#restaurants-section {
+    display:flex;
+    gap: 1em;
+}
+.restaurant-card {
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(black, 0.25);
+    cursor: pointer;
+    height: 14vw;
+    max-height: 240px;
+    position: relative;
+    transition: transform 250ms;
+    width: 25%;
+    background-color: #ffc4c4;
+    top: 3rem;
+}
