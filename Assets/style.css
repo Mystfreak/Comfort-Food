@@ -16,6 +16,7 @@ body {
     height: 30rem;
     background-color: #ffc4c4;
     position: relative;
+    border-radius: 10px;
 }
 /* Search Box */
 #search {
@@ -31,8 +32,10 @@ body {
     right:3%;
     width: 20%;
 }
-
+/* restaurant suggestions on landing page */
 #restaurants-section {
+    width: 100%;
+    height:40rem;
     display:flex;
     gap: 1em;
 }
@@ -46,5 +49,26 @@ body {
     transition: transform 250ms;
     width: 25%;
     background-color: #ffc4c4;
-    top: 3rem;
+    top: 10rem;
+}
+/* Bootstrap Cards */
+#burger{
+    width:100%;
+    height: 100%;
+    border-radius: 10px;
+}
+#ice-cream{
+    width:100%;
+    height: 100%;
+    border-radius: 10px;
+}
+#noodles{
+    width:100%;
+    height: 100%;
+    border-radius: 10px;
+}
+#pizza{
+    width:100%;
+    height: 100%;
+    border-radius: 10px;
 }
