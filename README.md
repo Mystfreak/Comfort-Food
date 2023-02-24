@@ -15,6 +15,6 @@ Food recipe app for people that love delicious and tasty foods.  This app enable
 ![image](search.jpg)
 
 ## Link
-![Deployment link](https://mystfreak.github.io/Password-Generator/)
+[Deployment link](https://mystfreak.github.io/Comfort-Food/)
 
 
