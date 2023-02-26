@@ -1,10 +1,13 @@
-//Variables to acces the search bar
+//Variables to access the search bar
 const form = document.querySelector('form');
 const searchResult = document.querySelector('.search')
 const container = document.querySelector('.container');
+const favourites = document.querySelector('.favourites');
+const recipe = document.querySelector('.item');
+
 let userQuery = '';
 
-//Variables for type writer function
+//Variables for type-writer function
 var i = 0;
 var txt = 'Delicious and tasty foods';
 var speed = 50;
@@ -44,16 +47,32 @@ function createContent(results){
         initialContent += 
 
         `<div class="item">
-        <img src="${result.recipe.image}" alt="">
+        <img src="${result.recipe.image}" alt="recipe-image">
         <div class="flex-container">
             <h1 class='title'>${result.recipe.label}</h1>
             <a class='view-btn' href='${result.recipe.url}'>View Recipe</a>
         </div>
-        <p class='recipe-desc'>Calories : ${result.recipe.calories.toFixed(2)}</p>
     </div>`
 
 
     })
 
     searchResult.innerHTML = initialContent;
+}
+
+// Adding Local Storage
+console.log(localStorage);
+
+//Event Listener for favourites icon
+let favouriteRecipe = '';
+if (recipe){
+recipe.addEventListener('Onclick' , (e)=>{
+  favouriteRecipe =  e.target.querySelector(recipe).value;
+  console.log(favouriteRecipe);
+    fetchData();
+})
+
+favourites.addEventListener('Onclick' , (e)=>{
+  localStorage.getItem(recipe);
+})
 }
