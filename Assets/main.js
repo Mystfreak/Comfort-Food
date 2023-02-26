@@ -1,8 +1,10 @@
+//Variables to acces the search bar
 const form = document.querySelector('form');
 const searchResult = document.querySelector('.search')
 const container = document.querySelector('.container');
 let userQuery = '';
 
+//Variables for type writer function
 var i = 0;
 var txt = 'Delicious and tasty foods';
 var speed = 50;
@@ -16,16 +18,18 @@ function typeWriter() {
 }
 //https://api.edamam.com/search
 
+//ID and key to acces the Edamam API
 const ID = "491c0a25";
 const key = "90f6192735aad01f8dc20fb18ee53869";
 
+//Event Listener for user input
 form.addEventListener('submit' , (e)=>{
     e.preventDefault();
     userQuery = e.target.querySelector('input').value;
     console.log(userQuery);
     fetchData();
 })
-
+//Fetch required data from Edamam API
 async function fetchData(){
  const baseURL = `https://api.edamam.com/search?q=${userQuery}&app_id=${ID}&app_key=${key}`;
  const response = await fetch(baseURL);
@@ -33,7 +37,7 @@ async function fetchData(){
  createContent(data.hits);
  console.log(data);
 }
-
+//Show the data provided by the API to the user
 function createContent(results){
     let initialContent = '';
     results.map(result => {
