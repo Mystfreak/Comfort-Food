@@ -17,4 +17,5 @@ Food recipe app for people that love delicious and tasty foods.  This app enable
 ## Link
 [Deployment link](https://mystfreak.github.io/Comfort-Food/)
 
-
+## Credits
+#### [Lisa Anufrieva](https://github.com/eliza-an) - local storage to add favourite recipes.
