@@ -26,7 +26,7 @@ const ID = "491c0a25";
 const key = "90f6192735aad01f8dc20fb18ee53869";
 
 //Event Listener for user input
-form.addEventListener('submit' , (e)=>{
+form.addEventListener('submit' , let fetch = (e) =>{
     e.preventDefault();
     userQuery = e.target.querySelector('input').value;
     console.log(userQuery);
@@ -61,18 +61,18 @@ function createContent(results){
 }
 
 // Adding Local Storage
-console.log(localStorage);
+localStorage.setItem('favourite', );
 
 //Event Listener for favourites icon
 let favouriteRecipe = '';
 if (recipe){
-recipe.addEventListener('Onclick' , (e)=>{
+recipe.addEventListener('click' , (e)=>{
   favouriteRecipe =  e.target.querySelector(recipe).value;
   console.log(favouriteRecipe);
     fetchData();
 })
 
-favourites.addEventListener('Onclick' , (e)=>{
+favourites.addEventListener('click' , (e)=>{
   localStorage.getItem(recipe);
 })
 }
