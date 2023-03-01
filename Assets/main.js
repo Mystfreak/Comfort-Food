@@ -1,3 +1,4 @@
+//Variables to access the search bar
 const form = document.querySelector('form');
 const searchResult = document.querySelector('.search')
 const container = document.querySelector('.container');
@@ -72,27 +73,36 @@ async function fetchDatalocal(){
  const datalocal = await responselocal.json();
  createContent(datalocal.hits);
  console.log(datalocal);
-}
-//Show the data provided by the API to the user
-function createContentlocal(resultslocal){
-    let initialContentlocal = '';
-    resultslocal.map(resultlocal => {
-        initialContentlocal =
+ for (i=0; i<3; i++){
+let imagelocal=datalocal.hits[i].recipe.image
+let urllocal=datalocal.hits[i].recipe.url
+let titlelocal=datalocal.hits[i].recipe.label
+        let initialContentlocal =
         `<div class="item">
-        <img src="${resultlocal.recipe.image}" alt="recipe-image">
+        <img src="${imagelocal}" alt="recipe-image">
         <div class="flex-container">
-            <h1 class='title'>${resultlocal.recipe.label}</h1>
-            <a class='view-btn' href='${resultlocal.recipe.url}'>View Recipe</a>
+            <h1 class='title'>${titlelocal}</h1>
+            <a class='view-btn' href='${urllocal}'>View Recipe</a>
         </div>
     </div>`
-    }
-    )
 console.log(initialContentlocal)
-modal.append(initialContentlocal)
-fetchDatalocal()
-createContentlocal()
-    searchResult.innerHTML = initialContentlocal;
-}
+modal.innerHTML=initialContentlocal
+   }
+   }
+let x= fetchDatalocal()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
